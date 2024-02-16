@@ -31,6 +31,6 @@ const sr = ScrollReveal({
 sr.reveal(`.home__img, .gigs__data, .footer__content`, { delay: 500 })
 sr.reveal(`.booking-container`, { delay: 500 })
 
-sr.reveal(`.home__social,  .footer__create`, { origin: `bottom`, interval: 200 })
+sr.reveal(`.home__social`, { origin: `bottom`, interval: 200 })
 sr.reveal(`.about__data, .footer__social`, { origin: `left`, })
 sr.reveal(`.sec__data`, { origin: `right`, })
