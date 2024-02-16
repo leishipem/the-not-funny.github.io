@@ -8,15 +8,24 @@
 
 }
 
-/* Basic settings for main text font */
+/*================Variables css===================*/
 
+/* Basic settings for main text font */
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
 
 
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    transition: background-color .4s;
 
 }
+ul {
+    list-style: none;
+  }
 
 /* Projects default settings for hyper-links */
 
@@ -34,6 +43,12 @@ a {
 a:hover {
 
     color: #F9DC81;
+    /* transform: translateY(-.35rem); */
+
+}
+/*active-link*/
+.active-link{
+    color: #FE8D03;
 }
 
 /*............................................................  Containers */
@@ -141,11 +156,7 @@ a:hover {
     max-width: 100%;
     height: auto;
 }
-
-/*............................................................  Navbar Section */
-
-/* alterations made to Bootstraps navbar class for project specific navbar set up*/
-
+/*========Header & Nav==========*/
 .navbar {
     margin-bottom: 0;
     position: fixed;
@@ -156,7 +167,14 @@ a:hover {
     background-color: rgba(0, 0, 0, .5);
     border: 0;
 }
-
+.nav__link{
+    color: #FE8D03;
+    font-weight: 300;
+    transition: color .4s;
+}
+.nav__link:hover{
+    color: #8FBBEE;
+}
 /* removes border from expanded menu button in mobile version of navbar */
 
 .navbar-default .navbar-collapse {
@@ -194,7 +212,7 @@ a:hover {
 /* sets font type for link items in mobile nav */
 
 .navbar a {
-    font-family: "Chromate", sans-serif;
+    font-family: "Kalligraphia", sans-serif;
 }
 
 /*alterations made to Bootstraps navbar-brand class for project specific navbar set up on mobile */
@@ -503,30 +521,6 @@ video {
     color: black;
 }
 
-/* styles newsletter subscription */
-
-#signup.contact-form {
-    display: block;
-    font-size: 14px;
-    margin-top: 0em;
-    text-align: center;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    padding-top: 25px;
-}
-
-/* styles back to top link */
-
-#back {
-    color: black;
-    text-decoration: underline;
-}
-
-/* sets border color */
-
-input .email-box {
-    border-color: black;
-}
 
 /*......................................................... MEDIA QUERIES */
 
@@ -610,8 +604,8 @@ input .email-box {
     .navbar-default .navbar-nav>li>a:hover,
     .navbar-default .navbar-nav>li>a:active {
         text-decoration: underline;
-
     }
+
 
     /*............................................................  Jumbotron Section*/
     
@@ -649,10 +643,27 @@ input .email-box {
         width: 100%;
         height: 100%;
     }
-
-
-  .main {
+  
+}
+.main {
     overflow-x: hidden;
     /* For the animations ScrollReveal*/
   }
+/*==============BREAKPOINTS=========*/
+/*for small devices*/
+@media screen and (max-width: 300px){
+    .callout-container{
+        margin-inline: 1rem;
+    }
+    .home__social{
+        font-size: 2.5rem;
+    }
+    .carousel-inner{
+        width: 200px;
+    /* padding: .5rem .5rem .5rem .75rem; */
+
+    }
 }
+
+/*for large devices*/
+
