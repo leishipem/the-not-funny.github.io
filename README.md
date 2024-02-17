@@ -1,1 +1,1 @@
-# not-funny-band.github.io
+# the-not-funny.github.io
